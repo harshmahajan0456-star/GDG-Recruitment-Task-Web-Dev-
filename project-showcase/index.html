@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Makes the website responsive on phones -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Project Showcase & Feedback Board</title>
+
+    <!-- Our CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ==================== HEADER ==================== -->
+    <header class="header">
+        <div class="container header-content">
+            <div>
+                <h1>Project Showcase</h1>
+                <p>Share projects, discover ideas, and give feedback.</p>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- ==================== MAIN CONTENT ==================== -->
+    <main class="container">
+        <footer class="footer">
+    <div class="container">
+        <p>
+            Project Showcase & Feedback Board · Built for GDG recruitment
+        </p>
+    </div>
+</footer>
+
+        <!-- ==================== SUBMIT PROJECT ==================== -->
+        <section class="submit-section">
+            <h2>Submit Your Project</h2>
+
+            <form id="projectForm">
+
+                <!-- Project Title -->
+                <div class="form-group">
+                    <label for="projectTitle">Project Title</label>
+                    <input
+    type="text"
+    id="projectTitle"
+    placeholder="Enter your project title"
+    maxlength="100"
+    autocomplete="off"
+    required
+>
+                </div>
+
+                <!-- Project Description -->
+                <div class="form-group">
+                    <label for="projectDescription">Description</label>
+                    <textarea
+    id="projectDescription"
+    placeholder="Describe your project"
+    maxlength="500"
+    required
+></textarea>
+
+<small>Maximum 500 characters.</small>
+                </div>
+
+                <!-- Technology Tags -->
+                <div class="form-group">
+                    <label for="projectTags">
+                        Tech Tags
+                    </label>
+
+                    <input
+    type="text"
+    id="projectTags"
+    placeholder="Example: Web, JavaScript, AI"
+    maxlength="100"
+    autocomplete="off"
+    required
+>
+
+                    <small>
+                        Separate multiple tags with commas.
+                    </small>
+                </div>
+
+                <!-- Project Links -->
+                <div class="form-group">
+                    <label for="projectLink">
+                        GitHub / Demo Link
+                    </label>
+
+                    <input
+    type="url"
+    id="projectLink"
+    placeholder="https://github.com/your-project"
+    autocomplete="url"
+    required
+>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="primary-button">
+                    Submit Project
+                </button>
+
+            </form>
+        </section>
+
+
+        <!-- ==================== PROJECT DISCOVERY ==================== -->
+        <section class="projects-section">
+
+            <div class="section-heading">
+                <div>
+                    <h2>Project Feed</h2>
+                    <p>Explore projects submitted by the community.</p>
+                </div>
+            </div>
+
+
+            <!-- Search and Filter -->
+            <div class="controls">
+
+                <input
+                    type="search"
+                    id="searchInput"
+                    placeholder="Search projects..."
+                >
+
+                <select id="tagFilter">
+                    <option value="all">All Tags</option>
+                    <option value="Web">Web</option>
+                    <option value="AI">AI</option>
+                    <option value="Mobile">Mobile</option>
+                </select>
+
+            </div>
+
+
+            <!-- Projects will appear here using JavaScript -->
+            <div id="projectStatus" class="project-status" aria-live="polite">
+    Loading projects...
+</div>
+
+<div id="projectList" class="project-list"></div>
+
+        </section>
+
+    </main>
+
+<footer class="footer">
+    <div class="container">
+        <p>
+            Project Showcase & Feedback Board · Built for GDG recruitment
+        </p>
+    </div>
+</footer>
+    <!-- ==================== JAVASCRIPT ==================== -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase-config.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,481 @@
+/* ==================== RESET ==================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f8fafc;
+    color: #111827;
+    line-height: 1.6;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+
+/* ==================== GLOBAL LAYOUT ==================== */
+
+.container {
+    width: min(92%, 1120px);
+    margin: 0 auto;
+}
+
+
+/* ==================== HEADER ==================== */
+
+.header {
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+    padding: 36px 0;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header h1 {
+    font-size: clamp(28px, 4vw, 40px);
+    line-height: 1.2;
+    letter-spacing: -0.8px;
+    margin-bottom: 8px;
+}
+
+.header p {
+    color: #64748b;
+    font-size: 16px;
+    max-width: 620px;
+}
+
+
+/* ==================== MAIN ==================== */
+
+main {
+    padding-bottom: 60px;
+}
+
+
+/* ==================== SECTIONS ==================== */
+
+.submit-section {
+    background: #ffffff;
+    margin: 32px 0;
+    padding: 32px;
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+    box-shadow: 0 8px 30px rgba(15, 23, 42, 0.05);
+}
+
+.projects-section {
+    margin-bottom: 50px;
+}
+
+.submit-section h2,
+.projects-section h2 {
+    font-size: 25px;
+    line-height: 1.3;
+    margin-bottom: 7px;
+}
+
+.section-heading p {
+    color: #64748b;
+}
+
+
+/* ==================== FORM ==================== */
+
+.form-group {
+    margin-top: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.form-group input,
+.form-group textarea,
+.controls input,
+.controls select {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 11px;
+    background: #ffffff;
+    color: #111827;
+    outline: none;
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder,
+.controls input::placeholder {
+    color: #94a3b8;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.controls input:focus,
+.controls select:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.10);
+}
+
+.form-group textarea {
+    min-height: 125px;
+    resize: vertical;
+}
+
+.form-group small {
+    display: block;
+    margin-top: 6px;
+    color: #64748b;
+    font-size: 13px;
+}
+
+
+/* ==================== PRIMARY BUTTON ==================== */
+
+.primary-button {
+    margin-top: 24px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    background: #2563eb;
+    color: #ffffff;
+    font-weight: 700;
+    cursor: pointer;
+    transition:
+        transform 0.15s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.primary-button:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 14px rgba(37, 99, 235, 0.18);
+}
+
+.primary-button:active {
+    transform: translateY(0);
+}
+
+
+/* ==================== SEARCH + FILTER ==================== */
+
+.controls {
+    display: grid;
+    grid-template-columns: 1fr 190px;
+    gap: 12px;
+    margin: 22px 0 24px;
+}
+
+.controls select {
+    cursor: pointer;
+}
+
+
+/* ==================== PROJECT GRID ==================== */
+
+.project-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+
+/* ==================== PROJECT CARD ==================== */
+
+.project-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 5px 20px rgba(15, 23, 42, 0.04);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-3px);
+    border-color: #dbe3ef;
+    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
+}
+
+.project-card h3 {
+    font-size: 20px;
+    line-height: 1.35;
+    margin-bottom: 9px;
+}
+
+.project-description {
+    color: #64748b;
+    margin-bottom: 17px;
+}
+
+
+/* ==================== TAGS ==================== */
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-bottom: 18px;
+}
+
+.tag {
+    display: inline-flex;
+    align-items: center;
+    background: #eff6ff;
+    color: #1d4ed8;
+    border: 1px solid #dbeafe;
+    padding: 5px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+/* ==================== PROJECT LINK ==================== */
+
+.project-link {
+    display: inline-block;
+    margin-bottom: 18px;
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.project-link:hover {
+    text-decoration: underline;
+}
+
+
+/* ==================== PROJECT ACTIONS ==================== */
+
+.project-actions {
+    display: flex;
+    gap: 10px;
+    border-top: 1px solid #e5e7eb;
+    padding-top: 16px;
+}
+
+.action-button {
+    padding: 9px 13px;
+    border: 1px solid #d1d5db;
+    border-radius: 9px;
+    background: #ffffff;
+    color: #374151;
+    cursor: pointer;
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.15s ease;
+}
+
+.action-button:hover {
+    background: #f8fafc;
+    border-color: #94a3b8;
+    transform: translateY(-1px);
+}
+
+
+/* ==================== COMMENTS ==================== */
+
+.comments {
+    margin-top: 18px;
+}
+
+.comments h4 {
+    margin-bottom: 11px;
+    font-size: 15px;
+}
+
+.comment-list {
+    margin-bottom: 14px;
+}
+
+.comment-list > p {
+    color: #64748b;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.comment {
+    background: #f8fafc;
+    border: 1px solid #eef2f7;
+    padding: 10px 12px;
+    border-radius: 9px;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #475569;
+}
+
+.comment-form {
+    display: flex;
+    gap: 10px;
+}
+
+.comment-input {
+    flex: 1;
+    min-width: 0;
+    padding: 10px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 9px;
+    outline: none;
+}
+
+.comment-input:focus {
+    border-color: #2563eb;
+}
+
+/* ==================== PROJECT STATUS ==================== */
+
+.project-status {
+    padding: 18px;
+    margin-bottom: 18px;
+    border-radius: 12px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    color: #64748b;
+    text-align: center;
+    font-size: 14px;
+}
+
+.project-status.hidden {
+    display: none;
+}
+
+/* ==================== EMPTY STATE ==================== */
+
+.empty-state {
+    grid-column: 1 / -1;
+    background: #ffffff;
+    border: 1px dashed #cbd5e1;
+    border-radius: 14px;
+    padding: 45px 25px;
+    text-align: center;
+    color: #64748b;
+}
+
+.empty-state h3 {
+    color: #334155;
+    margin-bottom: 5px;
+}
+
+/* ==================== FOOTER ==================== */
+
+.footer {
+    border-top: 1px solid #e5e7eb;
+    background: #ffffff;
+    padding: 24px 0;
+    text-align: center;
+}
+
+.footer p {
+    color: #64748b;
+    font-size: 14px;
+}
+
+/* ==================== ACCESSIBILITY ==================== */
+
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+a:focus-visible {
+    outline: 3px solid rgba(37, 99, 235, 0.35);
+    outline-offset: 2px;
+}
+/* ==================== MOBILE ==================== */
+
+/* ==================== DISABLED / UPVOTED STATE ==================== */
+
+.action-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.75;
+    background: #f1f5f9;
+    border-color: #cbd5e1;
+}
+
+.action-button:disabled:hover {
+    transform: none;
+    background: #f1f5f9;
+    border-color: #cbd5e1;
+}
+
+@media (max-width: 768px) {
+
+    .container {
+        width: 92%;
+    }
+
+    .header {
+        padding: 28px 0;
+    }
+
+    .header h1 {
+        font-size: 29px;
+    }
+
+    .header p {
+        font-size: 15px;
+    }
+
+    .submit-section {
+        padding: 22px;
+        margin: 24px 0;
+        border-radius: 15px;
+    }
+
+    .submit-section h2,
+    .projects-section h2 {
+        font-size: 22px;
+    }
+
+    .controls {
+        grid-template-columns: 1fr;
+    }
+
+    .project-list {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card {
+        padding: 20px;
+    }
+
+    .project-actions {
+        flex-wrap: wrap;
+    }
+
+    .comment-form {
+        flex-direction: column;
+    }
+
+    .comment-form .action-button {
+        width: 100%;
+    }
+}
