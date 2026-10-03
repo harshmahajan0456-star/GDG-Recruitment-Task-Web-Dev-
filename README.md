@@ -6,11 +6,11 @@ Users can submit projects, discover projects shared by the community, search and
 
 ## Live Demo
 
-> To be added after deployment.
+https://gdg-recruitment-task-web-dev-projec.vercel.app
 
 ## GitHub Repository
 
-> To be added after the GitHub repository is created.
+https://github.com/harshmahajan0456-star/GDG-Recruitment-Task-Web-Dev
 
 ---
 
